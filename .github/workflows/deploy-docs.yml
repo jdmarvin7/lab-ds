@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-  
+
 jobs:
   build-and-deploy
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout
         uses: actions/chekout@v3
@@ -17,7 +17,6 @@ jobs:
         uses: actions/setup-npde@v3
         with:
           node-version: 16
-      
 
       - run: npm ci
 
